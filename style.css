@@ -28,11 +28,47 @@ p {
   margin: 0;
 }
 
+.btns {
+  position: sticky;
+  top: 0;
+  right: 0;
+  z-index: 4;
+}
+#btn1, #btn2 {
+  position: absolute;
+  right: 15px;
+  color: white;
+  width: 50px;
+  /*padding: 1em;*/
+  padding-top: 0.4em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;
+  padding-right: 0.5em;
+
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px #000;
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+}
+
+#btn1 {
+  background-color: green;
+  border-color: none;
+  top: 10px;
+}
+
+#btn2 {
+  background-color: red;
+  border-color: none;
+  top: 80px;
+}
+
 .intro {
   display: grid;
   grid:
     "welcome welcome" 75vh
-    "ed module" 125vh / max-content max-content;
+    "ed module" 75vh / max-content max-content;
   margin-bottom: 60vh;
   grid-gap: 15px;
   font-size: 4rem;
@@ -44,6 +80,12 @@ p {
   position: sticky;
   top: 2em;
   margin-bottom: 1.5em;
+
+}
+
+.intro-1 span {
+  font-weight: 700;
+  text-shadow: 2px 2px 4px #FFF;
 }
 
 .intro-2 {
@@ -94,11 +136,13 @@ p {
   left: 0;
   right: 0;
   z-index: 2;
+  box-shadow: 6px 6px 15px #000;
 }
 
 .thumbnails img {
   position: relative;
   z-index: 3;
+  box-shadow: 6px 6px 8px #000;
 }
 
 .examples {
@@ -137,7 +181,7 @@ p {
   left: 0;
   right: 0;
   z-index: 1;
-  background: linear-gradient(var(--clr-4) 20%, transparent, white 80%);
+  background: linear-gradient(var(--clr-4) 20%, transparent, var(--clr-2) 80%);
 }
 
 /*.three-levels {
@@ -152,6 +196,8 @@ p {
   margin-bottom: 20vh;
   position: sticky;
   top: 10vh;
+  /*font-size: 1.5em;*/
+  font-weight: 600;
 }
 
 .visceral, .behavioral, .reflective {
@@ -174,5 +220,15 @@ p {
 }
 
 .reflective {
-  margin-bottom: 60vh;
+  margin-bottom: 50vh;
+}
+
+.end {
+  background: linear-gradient(transparent, var(--clr-3) 95%);
+
+  font-size: 2em;
+  font-weight: 900;
+
+  padding: 25vh 0 50vh;
+  text-align: center;
 }
