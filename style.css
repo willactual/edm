@@ -137,7 +137,7 @@ p {
   left: 0;
   right: 0;
   z-index: 1;
-  background: linear-gradient(var(--clr-4) 20%, transparent, var(--clr-2) 80%);
+  background: linear-gradient(var(--clr-4) 20%, transparent, white 80%);
 }
 
 /*.three-levels {
