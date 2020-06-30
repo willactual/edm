@@ -67,7 +67,7 @@ p {
   grid:
     "text thumbnails" 1fr / 1fr 1fr;
   grid-gap: 1em;
-  margin-bottom: 100vh;
+  margin-bottom: 60vh;
 }
 
 .definition p {
@@ -115,7 +115,7 @@ p {
   background-size: cover;
   padding: 2em;
   font-size: 2em;
-  height: 250vh;
+  height: 200vh;
   position: relative;
   /*margin-bottom: 100vh;*/
 }
@@ -137,11 +137,42 @@ p {
   left: 0;
   right: 0;
   z-index: 1;
-  background: linear-gradient(var(--clr-4) 20%, transparent, var(--clr-3) 80%);
+  background: linear-gradient(var(--clr-4) 20%, transparent, var(--clr-2) 80%);
 }
 
-.three-levels {
-  /*font-size: 5rem;*/
+/*.three-levels {
+  font-size: 5rem;
   background: var(--clr-3);
   padding: 25vh 0 50vh;
+}*/
+
+.three-levels-intro p {
+  text-align: center;
+  margin-top: 50vh;
+  margin-bottom: 20vh;
+  position: sticky;
+  top: 10vh;
+}
+
+.visceral, .behavioral, .reflective {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid:
+    "text thumbnails" 1fr / 1fr 1fr;
+  grid-gap: 1em;
+  margin-bottom: 30vh;
+
+}
+
+.visceral p, .behavioral p, .reflective p {
+  grid-area: text;
+  position: sticky;
+  top: 40vh;
+  align-self: start;
+  margin-top: 25vh;
+}
+
+.reflective {
+  margin-bottom: 60vh;
 }
