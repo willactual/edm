@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <div class="btns">
+      <button id="btn1" onclick="start();">&#9654;</button>
+      <button id="btn2" onclick="stop();">&#9632;</button>
+    </div>
     <div class="intro">
-      <p class="intro-1">Welcome to</p>
+      <p class="intro-1"><span>Welcome</span> to</p>
       <p class="intro-2">the Emotional Design</p>
       <p class="intro-3">Module</p>
       <!-- <p class="intro-4">Design Module</p> -->
@@ -24,7 +28,7 @@
     </div>
 
     <div class="positive">
-      <p>Applying emotional design principles to learning materials can affect positive emotions and in multi-media material, and these positive emotions can facilitate increases in cognitive processes and learning.</p>
+      <p>Applying positive emotional design principles to learning materials can facilitate increases in cognitive processes and learning.</p>
     </div>
 
     <div class="three-levels-intro">
@@ -52,6 +56,33 @@
       </div>
     </div>
 
+    <div class="end">
+      <p>Return to CVR for the next set of instructions.</p>
+    </div>
 
+    <script>
+        let stop;
+        function start() {
+          stop = pageScroll();
+        };
+
+        function pageScroll() {
+          let scrolldelay = 0;
+          function run() {
+            window.scrollBy(0,1);
+            scrolldelay = setTimeout(run,10);
+          };
+          scrolldelay = setTimeout(run,10);
+
+          return stop;
+
+          function stop() {
+            if (scrolldelay) {
+                clearTimeout(scrolldelay);
+                scrolldelay = 0;
+            };
+          };
+        }
+    </script>
   </body>
 </html>
