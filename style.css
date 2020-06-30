@@ -3,6 +3,7 @@
   --clr-2: #D42B8E;
   --clr-3: #D4C62B;
   --clr-4: #2BD471;
+  --clr-5: #000;
 }
 
 * {
@@ -16,7 +17,7 @@ body {
   min-height: 100vh;
   font-size: 24px;
   margin: 0;
-  color: rgba(0,0,0,0.7);
+  color: rbga(0,0,0,0.7);
 }
 
 img {
@@ -32,7 +33,7 @@ p {
   grid:
     "welcome welcome" 75vh
     "ed module" 125vh / max-content max-content;
-  margin-bottom: 150vh;
+  margin-bottom: 60vh;
   grid-gap: 15px;
   font-size: 4rem;
 }
@@ -59,7 +60,88 @@ p {
   font-style: italic;
 }
 
-/*.intro-2, .intro-3 {
+.definition {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid:
+    "text thumbnails" 1fr / 1fr 1fr;
+  grid-gap: 1em;
+  margin-bottom: 100vh;
+}
+
+.definition p {
+  grid-area: text;
+  position: sticky;
+  top: 20vh;
+  align-self: start;
+}
+
+.thumbnails {
+  grid-area: thumbnails;
+  margin-top: 50vh;
+  padding: 0.3em;
+  background: var(--clr-5);
+  position: relative;
+}
+
+.thumbnails::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(var(--clr-5) calc(100% - 5em), transparent 95%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.thumbnails img {
+  position: relative;
+  z-index: 3;
+}
+
+.examples {
+  position: sticky;
   font-weight: 900;
-  font-style: italic;
-}*/
+  bottom: 40vh; /*text from bottom*/
+  color: white;
+  margin-top: 3em;
+  text-align: center;
+}
+
+.positive {
+  background: url(imgs/smiles.jpg);
+  background-size: cover;
+  padding: 2em;
+  font-size: 2em;
+  height: 250vh;
+  position: relative;
+  /*margin-bottom: 100vh;*/
+}
+
+.positive p {
+  position: relative;
+  z-index: 2;
+  color: #FFF;
+  /*text-shadow: 2px 2px 2px #000;*/
+  position: sticky;
+  top: 2em;
+}
+
+.positive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(var(--clr-4) 20%, transparent, var(--clr-3) 80%);
+}
+
+.three-levels {
+  /*font-size: 5rem;*/
+  background: var(--clr-3);
+  padding: 25vh 0 50vh;
+}
