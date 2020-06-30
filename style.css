@@ -1,0 +1,65 @@
+:root {
+  --clr-1: #2B39D4;
+  --clr-2: #D42B8E;
+  --clr-3: #D4C62B;
+  --clr-4: #2BD471;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: basic-sans, sans-serif;
+  font-weight: 300;
+  background: linear-gradient(var(--clr-1), var(--clr-2));
+  min-height: 100vh;
+  font-size: 24px;
+  margin: 0;
+  color: rgba(0,0,0,0.7);
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+.intro {
+  display: grid;
+  grid:
+    "welcome welcome" 75vh
+    "ed module" 125vh / max-content max-content;
+  margin-bottom: 150vh;
+  grid-gap: 15px;
+  font-size: 4rem;
+}
+
+.intro-1 {
+  grid-area: welcome;
+  align-self: center;
+  position: sticky;
+  top: 2em;
+  margin-bottom: 1.5em;
+}
+
+.intro-2 {
+  grid-area: ed;
+  position: sticky;
+  top: 3.5em;
+  align-self: center;
+}
+
+.intro-3 {
+  grid-area: module;
+  align-self: end;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/*.intro-2, .intro-3 {
+  font-weight: 900;
+  font-style: italic;
+}*/
