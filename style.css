@@ -236,3 +236,18 @@ p {
   padding: 25vh 0 50vh;
   text-align: center;
 }
+
+#scrollText {
+  position: sticky;
+  bottom: 1em;
+  color: #FFF;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+#scrollText span {
+  font-size: 2em;
+  font-weight: 100;
+}
