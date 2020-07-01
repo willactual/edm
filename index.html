@@ -2,6 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="description" content="Emotional Design Module">
+    <meta name="keywords" content="emotional, design, module, instructional, positive, visceral, behavioral, reflective, learning">
+    <meta name="author" content="Will Actual">
     <meta name="viewport" content="width:device-width; initial-scale:1.0;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
@@ -12,14 +15,13 @@
   </head>
   <body>
     <div class="btns">
-      <div id="btn1">&#9654;</div>
-      <div id="btn2">&#9632;</div>
+      <div id="btn1" title="Start Auto-Scroll">&#9656;</div>
+      <div id="btn2" title="Stop Auto-Scroll">&#9632;</div>
     </div>
     <div class="intro">
       <p class="intro-1"><span>Welcome</span> to</p>
       <p class="intro-2">the Emotional Design</p>
       <p class="intro-3">Module</p>
-      <!-- <p class="intro-4">Design Module</p> -->
     </div>
 
     <div class="definition">
@@ -65,10 +67,6 @@
 
     <script>
         let stop;
-        // let scrolldelay;
-        // function start() {
-        //   stop = pageScroll();
-        // };
 
         function pageScroll() {
           let scrolldelay = 0;
@@ -84,11 +82,12 @@
             clearTimeout(scrolldelay);
             scrolldelay = 0;
           };
-        }
+        };
 
         $("#btn1").click(function() {
           stop = pageScroll();
         });
+
         $("#btn2").click(function() {
           stop();
         });
