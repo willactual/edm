@@ -12,8 +12,8 @@
   </head>
   <body>
     <div class="btns">
-      <div id="btn1" onclick="start();">&#9654;</div>
-      <div id="btn2" onclick="stop();">&#9632;</div>
+      <div id="btn1">&#9654;</div>
+      <div id="btn2">&#9632;</div>
     </div>
     <div class="intro">
       <p class="intro-1"><span>Welcome</span> to</p>
@@ -65,9 +65,10 @@
 
     <script>
         let stop;
-        $("#btn1").click(function() {
-          stop = pageScroll();
-        });
+        // let scrolldelay;
+        // function start() {
+        //   stop = pageScroll();
+        // };
 
         function pageScroll() {
           let scrolldelay = 0;
@@ -80,15 +81,17 @@
           return stop;
 
           function stop() {
-            if (scrolldelay) {
-                clearTimeout(scrolldelay);
-                scrolldelay = 0;
-            };
+            clearTimeout(scrolldelay);
+            scrolldelay = 0;
           };
         }
 
-        // $("#btn1").click(start());
-        $("#btn2").click(stop());
+        $("#btn1").click(function() {
+          stop = pageScroll();
+        });
+        $("#btn2").click(function() {
+          stop();
+        });
     </script>
   </body>
 </html>
