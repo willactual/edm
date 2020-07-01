@@ -67,6 +67,7 @@
 
     <script>
         let stop;
+        let startingAuto = true;
 
         function pageScroll() {
           let scrolldelay = 0;
@@ -85,11 +86,15 @@
         };
 
         $("#btn1").click(function() {
-          stop = pageScroll();
+          if (startingAuto) {
+            stop = pageScroll();
+            startingAuto = false;
+          }
         });
 
         $("#btn2").click(function() {
           stop();
+          startingAuto = true;
         });
     </script>
   </body>
