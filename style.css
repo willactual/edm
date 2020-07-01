@@ -39,12 +39,10 @@ p {
   right: 15px;
   color: white;
   width: 50px;
-  /*padding: 1em;*/
   padding-top: 0.4em;
   padding-left: 0.5em;
   padding-bottom: 0.5em;
   padding-right: 0.5em;
-
   border-radius: 10px;
   box-shadow: 6px 6px 10px #000;
   cursor: pointer;
@@ -56,12 +54,17 @@ p {
   background-color: green;
   border-color: none;
   top: 10px;
+  padding-top: 0.1em;
+  padding-left: 0.2em;
+  padding-bottom: 0.2em;
+  padding-right: 0.2em;
 }
 
 #btn2 {
   background-color: red;
   border-color: none;
-  top: 80px;
+  top: 70px;
+  font-size: 0.7em;
 }
 
 .intro {
@@ -161,14 +164,12 @@ p {
   font-size: 2em;
   height: 200vh;
   position: relative;
-  /*margin-bottom: 100vh;*/
 }
 
 .positive p {
   position: relative;
   z-index: 2;
   color: #FFF;
-  /*text-shadow: 2px 2px 2px #000;*/
   position: sticky;
   top: 2em;
 }
@@ -184,19 +185,12 @@ p {
   background: linear-gradient(var(--clr-4) 20%, transparent, var(--clr-2) 80%);
 }
 
-/*.three-levels {
-  font-size: 5rem;
-  background: var(--clr-3);
-  padding: 25vh 0 50vh;
-}*/
-
 .three-levels-intro p {
   text-align: center;
   margin-top: 50vh;
   margin-bottom: 20vh;
   position: sticky;
   top: 10vh;
-  /*font-size: 1.5em;*/
   font-weight: 600;
 }
 
@@ -225,10 +219,8 @@ p {
 
 .end {
   background: linear-gradient(transparent, var(--clr-3) 95%);
-
   font-size: 2em;
   font-weight: 900;
-
   padding: 25vh 0 50vh;
   text-align: center;
 }
